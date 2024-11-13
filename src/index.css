@@ -1,0 +1,317 @@
+* {
+  font-family: "Barlow", sans-serif !important;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  background-color: #dfa07cac;
+}
+
+h1,
+h3,
+h4 {
+  font-weight: bold;
+  line-height: 0.50;
+  font-family: "Fredoka", serif !important;
+  position: relative;
+
+}
+
+.headhead {
+  margin-bottom: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.clock-schedule {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding-bottom: 100px;
+}
+
+.clock-face {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  border: 5px solid #333;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.clock-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  background-color: #dfa07cef;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  align-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.clock-hour {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  
+}
+
+.clock-minute-marker {
+  position: absolute;
+
+}
+
+.clock-activity {
+  position: absolute;
+  text-align: center;
+
+}
+
+.activity-label {
+  font-size: 1rem !important;
+  color: #555555;
+  font-family: "Akshar", sans-serif;
+}
+
+.clock-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: #333;
+  border-radius: 5px;
+  transform-origin: bottom center;
+}
+
+.hour-hand {
+  width: 15px;
+  height: 180px;
+  background-color: #88452f;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.minute-hand {
+  background-color: #ec7851;
+  width: 15px;
+  height: 250px;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.current-time {
+  position: relative;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ec7851d9;
+  background-color: #88452f20;
+  padding: 0;
+  text-align: center;
+}
+
+.header {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffebdbd9;
+  background-color: #88452f20;
+  padding: 0;
+  text-align: center;
+}
+
+
+.second-hand {
+  background-color: rgb(233, 160, 105);
+  width: 2px;
+  height: 40%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+
+.activity-label {
+  font-family: "Fredoka", serif !important;
+  max-width: 80px;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 5px;
+  color: black;
+  font-weight: none;
+}
+
+.activity-segment {
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform-origin: 0 100%;
+}
+
+.clock-activity {
+  position: absolute;
+  text-align: center;
+}
+
+.clock-activity .activity-label {
+  background-color: #e8e4c9ac;
+  padding: 3px;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-size: 1.10rem !important;
+  font-family: "Akshar", sans-serif !important;
+}
+
+.clock-activity.end {
+  background-color: lightcoral;
+}
+
+.inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 540px;
+  height: 540px;
+  background-color: #dfa07c3a;
+  border-radius: 50%;
+  border: 2px solid #333;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.dog {
+  height: auto;
+  width: 300px;
+  transform: rotate(-80deg);
+  margin-right: 80px;
+
+}
+.menhera {
+  height: auto;
+  width: 200px;
+  transform: rotate(-50deg);
+  margin-right: 80px;
+
+}
+
+.legend {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+  background-color: rgba(0, 0, 0, 0.698);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 0.90rem;
+}
+
+.legend-time {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.legend-activity {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-family: "Akshar", sans-serif;
+}
+
+.dot-line {
+  position: relative;
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, transparent 50%, #333 50%, #333);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  margin: 0 8px;
+}
+
+
+.add-activity-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-activity-form input {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-activity-form button {
+  padding: 5px 10px;
+  background-color: #e8e4c9ac;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-activity-form button:hover {
+  background-color: #e4dcaaac;
+}
+
+.delete-button {
+  font-style: bold;
+  background-color: none;
+  margin-left: 20px;
+  background: none;
+  cursor: pointer;
+  color: #ec7851;
+  border: 1px solid #ec78513e;
+  background-color: #ec78513e;
+
+}
+
+
+.form-act::placeholder {
+  font-size: 1rem !important;
+  color: rgba(0, 0, 0, 0.34);
+  font-weight: 400;
+  font-family: "Akshar", sans-serif;
+
+}
+
+.form-act::type {
+  color: black !important;
+}
+
+
+.form-act {
+  font-weight: bold;
+  color: black;
+}
+
+.add-act-form {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Akshar", sans-serif;
+}
+
